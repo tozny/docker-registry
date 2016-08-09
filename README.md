@@ -28,3 +28,4 @@ docker run -d -p 5000:5000 --restart=always \
 -e "REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd" \
 test-registry <user> <password>
 ```
+
