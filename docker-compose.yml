@@ -1,0 +1,9 @@
+registry:
+  tty: true
+  build: .
+  stdin_open: true
+  env_file:
+    - ./registry.env
+  command: docker docker
+  ports:
+    - 5000:5000
