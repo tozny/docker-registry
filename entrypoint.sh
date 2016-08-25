@@ -3,8 +3,8 @@
 
 set -e
 
-user=$REGISTRY_USER
-password=$REGISTRY_PASSWORD
+user=$HT_USER
+password=$HT_PASSWORD
 
 [ -z $user ] || [ -z $password ] && echo "User or password not supplied through environment variables!" && exit 1
 
