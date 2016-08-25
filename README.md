@@ -4,7 +4,7 @@ This project was started since it was somewhat painful to add authentication to 
 
 ## Quickstart
 
-`docker run -d -p 5000:5000 -e REGISTRY_PASSWORD=docker -e REGISTRY_USER=docker bentozny/docker-registry`
+`docker run -d -p 5000:5000 -e HT_PASSWORD=docker -e HT_USER=docker bentozny/docker-registry`
 
 ## Running with Docker Compose
 
