@@ -3,13 +3,10 @@
 
 set -e
 
-if [ $# -ne 2 ]; then
-  echo "Usage: <user> <password>"
-  exit 1
-fi
+user=$REGISTRY_USER
+password=$REGISTRY_PASSWORD
 
-user=$1
-password=$2
+[ -z $user ] || [ -z $password ] && echo "User or password not supplied through environment variables!" && exit 1
 
 mkdir -p /auth/
 htpasswd -Bbn "$user" "$password" > /auth/htpasswd

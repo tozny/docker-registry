@@ -4,6 +4,5 @@ registry:
   stdin_open: true
   env_file:
     - ./registry.env
-  command: user password
   ports:
     - 5000:5000

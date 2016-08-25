@@ -4,10 +4,9 @@ This project was started since it was somewhat painful to add authentication to 
 
 ## Quickstart
 
-`docker run -d -p 5000:5000 bentozny/docker-registry user password`
+`docker run -d -p 5000:5000 -e REGISTRY_PASSWORD=docker -e REGISTRY_USER=docker bentozny/docker-registry`
 
 ## Running with Docker Compose
-
 
 ### Build the container image
 
@@ -16,20 +15,3 @@ This project was started since it was somewhat painful to add authentication to 
 ### Start the container
 
 `docker-compose up`
-
-## Run the container without docker-compose
-
-### Build
-
-`docker build -t test-registry .`
-
-### Run
-
-```
-docker run -d -p 5000:5000 --restart=always \
--e "REGISTRY_AUTH=htpasswd" \
--e "REGISTRY_AUTH_HTPASSWD_REALM=realm" \
--e "REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd" \
-test-registry <user> <password>
-```
-
